@@ -3,10 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dom</title>
 </head>
 <body>
-    <h1>What is HTML</h1>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit impedit minus soluta eius, et tenetur ipsum odio fugit illo quis adipisci laudantium nobis delectus? Harum non quo molestias maxime, incidunt eum soluta? Atque ullam nam temporibus repudiandae assumenda possimus facilis quibusdam magnam sint maxime? Eaque ipsam accusamus praesentium at atque nostrum nobis aspernatur amet molestiae itaque vel repudiandae tenetur et architecto, minima repellendus porro ullam natus laboriosam aut assumenda. Quisquam veritatis, nisi minima unde exercitationem neque aperiam tenetur non harum animi quis cupiditate magni sequi magnam deserunt doloribus, vero nulla accusantium quidem, voluptatum asperiores. Ducimus enim eligendi sit odit facere illo magni quas voluptate voluptas. Consequuntur necessitatibus nam, dolorum nemo, iusto nostrum nobis odit nulla architecto amet iure itaque voluptas ipsa quae praesentium magnam saepe tempora quis adipisci libero omnis id repellat beatae. Mollitia sint, unde ut sunt inventore modi sed voluptate harum libero fugit quas reiciendis, voluptatibus est magni beatae omnis assumenda commodi eum dolor et voluptatem velit rerum. Dolore reiciendis aliquid dolorem fugiat autem eveniet aliquam animi praesentium ipsa necessitatibus, sit, perferendis, accusantium magni illo distinctio reprehenderit consequatur perspiciatis. Perspiciatis magnam aliquam, doloremque corporis delectus, labore omnis veritatis, voluptate aliquid ullam dolores impedit laborum dicta magni molestias tempore.</p>
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">thursday</div>
+    </div>
+
+
+    <script>
+         const parent = document.querySelector(".parent");
+        // console.log(parent);
+        // console.log(parent.children);
+        // console.log(parent.children[1].innerHTML);
+        for(let i=0;i<parent.children.length;i++){
+            console.log(parent.children[i].innerHTML)
+        }
+        // parent.children[1].style.color = "red"
+        // parent.children[1].style.fontSize = "20px"
+
+        // console.log(parent.firstElementChild)
+
+        const day = document.querySelector(".day")
+        console.log(day)
+        console.log(day.parentElement)
+
+        console.log("NODES:",parent.childNodes)
+    </script>
 </body>
 </html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event concept</title>
+</head>
+<body>
+    <div class="container">
+        <ul id="images">
+            <li><img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg" alt="netwotking" id="netwotking" width="300" height="200"></li>
+            <li><img src="https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg" alt="camera" id="camera" width="300" height="200"></li>
+            <li><img src="https://buffer.com/cdn-cgi/image/w=1000,fit=contain,q=90,f=auto/library/content/images/size/w1200/2023/10/free-images.jpg" alt="photoshop" id="photoshop" width="300" height="200"></li>
+            <li><img src="https://h5p.org/sites/default/files/h5p/content/1209180/images/file-6113d5f8845dc.jpeg" alt="tiger" id="tiger" width="300" height="200"></li>
+            <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhKg8c8MF1uOoEeivmSKS520qWZinQGU3Ojwnc__JYPIAQ92bj3YTQkpFjWd4lH4aew_E&usqp=CAU" alt="man" id="man" width="300" height="200"></li>
+            <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUT2jLYoIC9Lg65AVA5KhEUdJdWFm0-vznZg&usqp=CAU" alt="flower" id="flower" width="300" height="200"></li>
+            <li><a href="https://google.com" id="google">Open Google</a></li>
+        </ul>
+    </div>
+
+
+    <script>
+        // document.getElementById('tiger').onclick = function(){
+        //     alert("This is a tiger")
+        // }
+
+        // document.getElementById('images').addEventListener('click',function(e){
+        //    console.log("clicked inside the ul")
+        // },false)
+
+        // document.getElementById('tiger').addEventListener('click',function(e){
+        //    console.log("clicked in tiger");
+        //    e.stopPropagation();
+        // },false)
+
+        // document.getElementById('google').addEventListener('click',function(e){
+        //     e.preventDefault();
+        //     e.stopPropagation();
+        //     console.log("google Clicked")
+        // },false)
+
+        document.querySelector('#images').addEventListener('click',function(e){
+            // console.log(e.target.parentNode);
+
+            console.log(e.target.tagName)
+            if(e.target.tagName === 'IMG'){
+                let removeIt = e.target.parentNode;
+                removeIt.remove();
+            }
+        },false)
+    </script>
+</body>
+</html>
